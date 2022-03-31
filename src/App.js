@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/Card.js";
+import { Lawyers } from "./Database.js";
+import styled from "styled-components";
+import { nanoid } from "nanoid";
 
 function App() {
+  const id = nanoid();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>
+      <Tittle>Capstone Project</Tittle>
+      <CardGrid>
+        {Lawyers.map((lawyerElement) => {
+          return <Card key={lawyerElement.id} lawyer={lawyerElement} />;
+        })}
+      </CardGrid>
+    </AppWrapper>
   );
 }
 
 export default App;
+
+const AppWrapper = styled.main`
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+`;
+
+const CardGrid = styled.div`
+  display: grid;
+  gap: 30px;
+  padding: 20px;
+`;
+
+const Tittle = styled.h1`
+background-color: #e8c2ca;
+border. none;
+color: #ccd;
+padding: 10px 5px;
+`;
