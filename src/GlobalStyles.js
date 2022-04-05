@@ -10,5 +10,10 @@ body {
     font-family: sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
+    background-color: #feeafa;
+}
+
+input, label, button, textarea, {
+    font-size: 1rem;
 }
 `;

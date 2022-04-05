@@ -1,21 +1,29 @@
 import Button from "./Button";
 import styled from "styled-components";
-import { Lawyers } from "../Database.js";
+import SearchPage from "./SearchPage";
+import ContactCard from "./ContactCard";
+import { useState } from "react";
 
-function Card({ Lawyer }) {
+function Card({ lawyer }) {
+  lawyer.specialty.map((speciality) => speciality);
+  const [show, setShow] = useState(false);
   return (
-    <CardWrapper type={Lawyer.type}>
-      <h2>{Lawyer.name}</h2>
+    <CardWrapper specialty={lawyer.specialty}>
+      <h2>{lawyer.name}</h2>
+
       <CardList>
-        {Lawyer.type.map((type) => {
-          return (
-            <List key={type} list={type}>
-              {type}
-            </List>
-          );
-        })}
+        {lawyer.specialty.map((speciality) => (
+          <ListElement>{speciality}</ListElement>
+        ))}
       </CardList>
-      <Button buttonType='showMore'>Show more</Button>
+      <Button buttonType='showMore' onClick={() => setShow(!show)}>
+        Show more
+      </Button>
+      <ContactCard
+        lawyer={lawyer}
+        className='show ? display : display:none'
+      ></ContactCard>
+
       <Button buttonType='showLess'>Show less</Button>
     </CardWrapper>
   );
@@ -24,7 +32,8 @@ function Card({ Lawyer }) {
 export default Card;
 
 const CardWrapper = styled.section`
-  background-color: #f0e6ef;
+  background-color: #219ebc;
+  color: #1d1045;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -33,17 +42,12 @@ const CardWrapper = styled.section`
   border-radius: 15px;
   border-left: 14px solid #ccd;
   opacity: 1;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.2s;
 
   & h2 {
     margin: 0;
   }
-
-  ${({ type }) =>
-    type.includes("family") &&
-    css`
-      background-color: #f0a6ca;
-    `}
 `;
 
 const CardList = styled.ul`
@@ -53,9 +57,9 @@ const CardList = styled.ul`
   gap: 10px;
 `;
 
-const List = styled.li`
+const ListElement = styled.li`
   padding: 5px 14px;
   border-radius: 999px;
-  background-color: ${(props) =>
-    props.list === "family" ? "#f0a6ca" : "#9c89b8"};
+  background-color: #3d5a80;
+  color: #ccd;
 `;

@@ -1,9 +1,9 @@
-export const Lawyers = [
+const Lawyers = [
   {
     id: "",
     name: "Saeed Jaberi",
-    type: "Immigration",
-    language: [Persian, English, Chinese],
+    specialty: ["Immigration law", "family law"],
+    language: ["Persian/Farsi, English, Chinese"],
     location: "Hamburg",
     contact: {
       address: "Große Reichenstraße 27, 20457 Hamburg",
@@ -21,8 +21,8 @@ export const Lawyers = [
   {
     id: "",
     name: "Kadir Katran",
-    type: "Immigration",
-    language: [Turkish],
+    specialty: ["Immigration law"],
+    language: ["Turkish"],
     location: "Hamburg",
     contact: {
       address: "Kroonhorst 9D, 22549 Hamburg",
@@ -36,7 +36,7 @@ export const Lawyers = [
   {
     id: "",
     name: "Albert Rühling - Ruehling Immigration Law",
-    type: "Immigration",
+    specialty: ["Immigration law"],
     language: [
       "Spanish fluently, English, Chinese, Russian, French and Italian",
     ],
@@ -53,8 +53,8 @@ export const Lawyers = [
   {
     id: "",
     name: "Ardehali Law Office",
-    type: "Immigration",
-    language: [English, Farsi],
+    specialty: ["Immigration law"],
+    language: ["English, Persian/Farsi"],
     location: "Hamburg",
     contact: {
       address: "Zirkusweg 1, 20359, Hamburg",
@@ -68,8 +68,8 @@ export const Lawyers = [
   {
     id: "",
     name: "Ingo Ziesemer",
-    type: "Immigration",
-    language: [English],
+    specialty: ["Immigration law"],
+    language: ["English"],
     location: "Hamburg",
     contact: {
       address: "Vereinsstr. 66, 20357, Hamburg",
@@ -82,8 +82,8 @@ export const Lawyers = [
   {
     id: "",
     name: "Jan-Olaf Moyzes",
-    type: "Immigration",
-    language: [English],
+    specialty: ["Immigration law"],
+    language: ["English"],
     location: "Hamburg",
     contact: {
       address: "Güntherstraße 77, 22087 Hamburg",
@@ -95,8 +95,8 @@ export const Lawyers = [
   {
     id: "",
     name: "Rechtsanwaltskanzlei Iyare A. Imasi",
-    type: "Immigration",
-    language: [English],
+    specialty: ["Immigration law"],
+    language: ["English"],
     location: "Hamburg",
     contact: {
       address: "Wandsbeker Chaussee 15 , 22089, Hamburg",
@@ -112,8 +112,8 @@ export const Lawyers = [
   {
     id: "",
     name: "Rechtsanwaltskanzlei Iyare A. Imasi",
-    type: "Immigration",
-    language: [English],
+    specialty: ["Immigration law"],
+    language: ["English"],
     location: "Hamburg",
     contact: {
       address: "Sophienblatt 1, 24103, Kiel",
@@ -125,4 +125,39 @@ export const Lawyers = [
       businessHours: ["Mon - Fri: 9am - 5pm", "Sat - Sun: Closed"],
     },
   },
+
+  {
+    id: "",
+    name: "Philipp Kutschke",
+    specialty: ["Immigration law"],
+    language: ["Vietnamese", "English"],
+    location: "Berlin",
+    contact: {
+      address: "Marienstraße 18, 10117, Berlin Mitte",
+      telephone: "+49 30 28 44 900 -1",
+      mobile: "0179 / 5999 869",
+      fax: "+49 30 28 44 900 -2",
+      email: " info@rakutschke.de",
+      website: "www.rakutschke.de/rechtsanwalt.html ",
+      businessHours: ["By appointment"],
+    },
+  },
+
+  {
+    id: "",
+    name: "Korte Rechtsanwälte",
+    specialty: ["Family law"],
+    language: ["English"],
+    location: "Berlin",
+    contact: {
+      address: "Wichertstraße 45, 10439, Berlin Berlin",
+      telephone: "+49 30 226 792 26",
+      fax: "+49 30 226 796 61",
+      email: " info@rakutschke.de",
+      website: "www.rechtsanwalt.com/kanzlei/korte-rechtsanwaelte ",
+      businessHours: ["By appointment"],
+    },
+  },
 ];
+
+export default Lawyers;
