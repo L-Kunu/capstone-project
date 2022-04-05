@@ -1,22 +1,18 @@
 import React from "react";
 import Button from "./Button";
 import styled from "styled-components";
-import { useState } from "react";
 
 export default function SearchPage({ onSubmit }) {
-  const [name, setName] = useState("");
-  const [speciality, setSpecialty] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
+    const Form = event.target;
+    const immigrationChecked = Form.immigration.checked;
+    const familyChecked = Form.family.checked;
+    console.log(familyChecked);
+
+    onSubmit(immigrationChecked, familyChecked);
   };
 
-  function filter(speciality, []) {
-    setSpecialty(
-      speciality.filter(
-        (immigration, family) => immigration.family.idex == lawyerIdex
-      )
-    );
-  }
   return (
     <Form
       onSubmit={handleSubmit}
@@ -26,36 +22,27 @@ export default function SearchPage({ onSubmit }) {
       <label htmlFor='text'>Your name</label>
       <input
         id='name-input'
-        name='text'
+        name='name-input'
         type='text'
-        className='text'
         placeholder='Add your name here'
       />
       <label htmlFor='text'>Your city</label>
       <input
         type='text'
+        name='city-input'
         id='city-input'
-        className='text'
         placeholder='Add the name of your city here'
       />
-      <label htmlFor='checkbox'>
-        Choose the kind of lawyer you are looking for
-      </label>
-      <div className=''>
-        <input
-          type='checkbox'
-          name='Immigration'
-          className='immigration ckeckbox'
-        />
-        Immigration
+      <span>Choose the kind of lawyer you are looking for</span>
+      <div>
+        <label htmlFor='immigration-law'>Immigration</label>
+        <input id='immigration-law' type='checkbox' name='immigration' />
       </div>
       <div>
-        <input type='checkbox' name='Family' className='family checkbox' />
-        Family
+        <label htmlFor='family-law'>Family</label>
+        <input id='family' type='checkbox' name='family' />
       </div>
-      <Button buttonType='search' onClick={handleSubmit}>
-        Search
-      </Button>
+      <Button buttonType='search'>Search</Button>
     </Form>
   );
 }
@@ -84,5 +71,6 @@ const Form = styled.form`
 
     div {
         margin-top: -1px;
+        display: block;
       }
 `;

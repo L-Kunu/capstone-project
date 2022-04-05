@@ -3,14 +3,20 @@ import Lawyers from "./Database.js";
 import styled from "styled-components";
 import { nanoid } from "nanoid";
 import SearchPage from "./components/SearchPage.js";
+import { useState } from "react";
 
 function App(index) {
   const id = nanoid();
+  //const [speciality, setSpecialty] = useState("");
+
+  function handleFilter(immigrationChecked, familyChecked) {
+    console.log(familyChecked, immigrationChecked);
+  }
   return (
     <>
       <AppWrapper>
         <Tittle>Capstone Project</Tittle>
-        <SearchPage />
+        <SearchPage onSubmit={handleFilter} />
         <CardGrid>
           {Lawyers.map((lawyerElement) => {
             return <Card key={lawyerElement.index} lawyer={lawyerElement} />;
