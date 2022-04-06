@@ -2,7 +2,7 @@ const Lawyers = [
   {
     id: "",
     name: "Saeed Jaberi",
-    specialty: ["Immigration law", "family law"],
+    specialty: ["Immigration law", "Family law"],
     language: ["Persian/Farsi, English, Chinese"],
     location: "Hamburg",
     contact: {

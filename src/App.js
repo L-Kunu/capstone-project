@@ -7,10 +7,32 @@ import { useState } from "react";
 
 function App(index) {
   const id = nanoid();
-  //const [speciality, setSpecialty] = useState("");
+  const [immigrationSearch, setImmigrationSearch] = useState(false);
+  const [familySearch, setFamilySearch] = useState(false);
+  const [LawyerList, setLawyerList] = useState(Lawyers);
+
+  const immigrationLaw = Lawyers.filter((lawyer) =>
+    lawyer.specialty.includes("Immigration law")
+  );
+
+  const familyLaw = Lawyers.filter((lawyer) =>
+    lawyer.specialty.includes("Family law")
+  );
 
   function handleFilter(immigrationChecked, familyChecked) {
-    console.log(familyChecked, immigrationChecked);
+    setImmigrationSearch(immigrationChecked);
+    setFamilySearch(familyChecked);
+    showResult();
+  }
+
+  function showResult() {
+    if (immigrationSearch & !familySearch) {
+      setLawyerList(immigrationLaw);
+    }
+
+    if (familySearch & !immigrationSearch) {
+      setLawyerList(familyLaw);
+    } else setLawyerList(Lawyers);
   }
   return (
     <>
@@ -18,7 +40,7 @@ function App(index) {
         <Tittle>Capstone Project</Tittle>
         <SearchPage onSubmit={handleFilter} />
         <CardGrid>
-          {Lawyers.map((lawyerElement) => {
+          {LawyerList.map((lawyerElement) => {
             return <Card key={lawyerElement.index} lawyer={lawyerElement} />;
           })}
         </CardGrid>
