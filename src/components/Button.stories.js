@@ -8,7 +8,7 @@ export default {
   },
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <Button {...args}> Text </Button>;
 
 export const Default = Template.bind({});
 Default.args = {};
