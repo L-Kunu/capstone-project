@@ -35,7 +35,7 @@ const Lawyers = [
 
   {
     id: "",
-    name: "Albert Rühling",
+    name: "Albert Rühling - Ruehling Immigration Law",
     specialty: ["Immigration law"],
     language: [
       "Spanish fluently, English, Chinese, Russian, French and Italian",

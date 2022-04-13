@@ -10,7 +10,7 @@ body {
     font-family: sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
-    background-color: #feeafe;
+    background-color: #feeafa;
 }
 
 input, label, button, textarea, {

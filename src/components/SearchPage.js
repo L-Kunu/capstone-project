@@ -8,6 +8,7 @@ export default function SearchPage({ onSubmit }) {
     const Form = event.target;
     const immigrationChecked = Form.immigration.checked;
     const familyChecked = Form.family.checked;
+    console.log(familyChecked);
 
     onSubmit(immigrationChecked, familyChecked);
   };
@@ -34,12 +35,12 @@ export default function SearchPage({ onSubmit }) {
       />
       <span>Choose the kind of lawyer you are looking for</span>
       <div>
-        <input id='immigration-law' type='checkbox' name='immigration' />
         <label htmlFor='immigration-law'>Immigration</label>
+        <input id='immigration-law' type='checkbox' name='immigration' />
       </div>
       <div>
-        <input id='family' type='checkbox' name='family' />
         <label htmlFor='family-law'>Family</label>
+        <input id='family' type='checkbox' name='family' />
       </div>
       <Button buttonType='search'>Search</Button>
     </Form>
@@ -47,14 +48,9 @@ export default function SearchPage({ onSubmit }) {
 }
 
 const Form = styled.form`
-background-color: #A7BBC7;
-border-radius: 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 16px;
-  //opacity: 0.8;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   input {
     flex: 1 1;
     border: 1px solid grey;
@@ -70,7 +66,6 @@ border-radius: 14px;
     input[type='checkbox']{
         height: 16px;
         width: 16px;
-        font-size: 2rem;
     }
     
 
