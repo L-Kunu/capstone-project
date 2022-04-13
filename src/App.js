@@ -4,18 +4,16 @@ import styled from "styled-components";
 import { nanoid } from "nanoid";
 import SearchPage from "./components/SearchPage.js";
 import { useState } from "react";
-import useLocalStorage from "./Hooks/UseLocalStorage.js";
 
 function App(index) {
   const id = nanoid();
   const [immigrationSearch, setImmigrationSearch] = useState(false);
   const [familySearch, setFamilySearch] = useState(false);
-  const [LawyerList, setLawyerList] = useLocalStorage("LawyerList", false);
+  const [LawyerList, setLawyerList] = useState(Lawyers);
 
   const immigrationLaw = Lawyers.filter((lawyer) =>
     lawyer.specialty.includes("Immigration law")
   );
-  console.log(immigrationLaw);
 
   const familyLaw = Lawyers.filter((lawyer) =>
     lawyer.specialty.includes("Family law")
@@ -34,9 +32,7 @@ function App(index) {
 
     if (familySearch & !immigrationSearch) {
       setLawyerList(familyLaw);
-    } else {
-      setLawyerList(Lawyers);
-    }
+    } else setLawyerList(Lawyers);
   }
   return (
     <>
@@ -75,7 +71,7 @@ box-shadow: 0 4px 8px 0 rgb(39, 50, 47, 0.25);
 border. none;
 color: #ccd;
 margin-top: -15px;
-padding: 20px 10px;
+padding: 10px 5px;
 text-align: center;
 width: 100vw;
 `;
