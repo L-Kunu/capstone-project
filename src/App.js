@@ -1,42 +1,29 @@
 import Card from "./components/Card.js";
 import Lawyers from "./Database.js";
 import styled from "styled-components";
-import { nanoid } from "nanoid";
 import SearchPage from "./components/SearchPage.js";
 import { useState } from "react";
 import useLocalStorage from "./Hooks/UseLocalStorage.js";
 
 function App(index) {
-  const id = nanoid();
-  const [immigrationSearch, setImmigrationSearch] = useState(false);
-  const [familySearch, setFamilySearch] = useState(false);
-  const [LawyerList, setLawyerList] = useLocalStorage("LawyerList", false);
-
-  const immigrationLaw = Lawyers.filter((lawyer) =>
-    lawyer.specialty.includes("Immigration law")
-  );
-  console.log(immigrationLaw);
-
-  const familyLaw = Lawyers.filter((lawyer) =>
-    lawyer.specialty.includes("Family law")
-  );
+  const [lawyerList, setLawyerList] = useLocalStorage("LawyerList", []);
+  const [filteredLawyers, setFilteredLawyers] = useState([]);
+  console.log(filteredLawyers);
 
   function handleFilter(immigrationChecked, familyChecked) {
-    setImmigrationSearch(immigrationChecked);
-    setFamilySearch(familyChecked);
-    showResult();
-  }
-
-  function showResult() {
-    if (immigrationSearch & !familySearch) {
-      setLawyerList(immigrationLaw);
+    if (immigrationChecked && familyChecked) {
+      return setFilteredLawyers(Lawyers);
+    } else if (immigrationChecked) {
+      return setFilteredLawyers(
+        Lawyers.filter((lawyer) => lawyer.specialty.includes("Immigration law"))
+      );
     }
-
-    if (familySearch & !immigrationSearch) {
-      setLawyerList(familyLaw);
-    } else {
-      setLawyerList(Lawyers);
+    if (familyChecked) {
+      return setFilteredLawyers(
+        Lawyers.filter((lawyer) => lawyer.specialty.includes("Family law"))
+      );
     }
+    setFilteredLawyers(Lawyers);
   }
   return (
     <>
@@ -44,8 +31,8 @@ function App(index) {
         <Tittle>Capstone Project</Tittle>
         <SearchPage onSubmit={handleFilter} />
         <CardGrid>
-          {LawyerList.map((lawyerElement) => {
-            return <Card key={lawyerElement.index} lawyer={lawyerElement} />;
+          {filteredLawyers.map((lawyerElement) => {
+            return <Card key={lawyerElement.id} lawyer={lawyerElement} />;
           })}
         </CardGrid>
       </AppWrapper>
