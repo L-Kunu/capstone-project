@@ -16,15 +16,22 @@ function Card({ lawyer }) {
           <ListElement>{speciality}</ListElement>
         ))}
       </CardList>
-      <Button buttonType='showMore' onClick={() => setShow(!show)}>
-        Show more
-      </Button>
-      <ContactCard
-        lawyer={lawyer}
-        className='show ? display : display:none'
-      ></ContactCard>
-
-      <Button buttonType='showLess'>Show less</Button>
+      {!show && (
+        <Button buttonType='showMore' onClick={() => setShow(!show)}>
+          Show more
+        </Button>
+      )}
+      {show && (
+        <Button buttonType='showLess' onClick={() => setShow(!show)}>
+          Show less
+        </Button>
+      )}
+      {show && (
+        <ContactCard
+          lawyer={lawyer}
+          className='show ? display : display:none'
+        ></ContactCard>
+      )}
     </CardWrapper>
   );
 }

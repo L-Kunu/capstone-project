@@ -3,12 +3,30 @@ import styled from "styled-components";
 export default function ContactCard({ lawyer }) {
   return (
     <Container>
-      <ListElement>{"Location: " + lawyer.location}</ListElement>
-      <ListElement>{"Language: " + lawyer.language}</ListElement>
-      <ListElement>{"Addresse: " + lawyer.contact.address}</ListElement>
-      <ListElement>{"Telephone: " + lawyer.contact.telephone}</ListElement>
-      <ListElement>{"Email: " + lawyer.contact.email}</ListElement>
-      <ListElement>{"Website: " + lawyer.contact.website}</ListElement>
+      <ListElement>
+        <Props>Location:</Props>
+        {" " + lawyer.location}
+      </ListElement>
+      <ListElement>
+        <Props>Language:</Props>
+        {" " + lawyer.language}
+      </ListElement>
+      <ListElement>
+        <Props>Addresse:</Props>
+        {" " + lawyer.contact.address}
+      </ListElement>
+      <ListElement>
+        <Props>Telephone:</Props>
+        {" " + lawyer.contact.telephone}
+      </ListElement>
+      <ListElement>
+        <Props>Email:</Props>
+        {" " + lawyer.contact.email}
+      </ListElement>
+      <ListElement>
+        <Props>Website:</Props>
+        {" " + lawyer.contact.website}
+      </ListElement>
     </Container>
   );
 }
@@ -22,4 +40,8 @@ const ListElement = styled.li`
   padding: 5px 14px;
   list-style: none;
   font-soze: 1rem;
+`;
+
+const Props = styled.span`
+  font-weight: bold;
 `;
