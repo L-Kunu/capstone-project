@@ -12,8 +12,8 @@ function Card({ lawyer }) {
       <h2>{lawyer.name}</h2>
 
       <CardList>
-        {lawyer.specialty.map((speciality) => (
-          <ListElement>{speciality}</ListElement>
+        {lawyer.specialty.map((speciality, index) => (
+          <ListElement key={index}>{speciality}</ListElement>
         ))}
       </CardList>
       {!show && (

@@ -1,6 +1,6 @@
 const Lawyers = [
   {
-    id: "",
+    id: "1",
     name: "Saeed Jaberi",
     specialty: ["Immigration law", "Family law"],
     language: ["Persian/Farsi, English, Chinese"],
@@ -19,7 +19,7 @@ const Lawyers = [
   },
 
   {
-    id: "",
+    id: "2",
     name: "Kadir Katran",
     specialty: ["Immigration law"],
     language: ["Turkish"],
@@ -34,7 +34,7 @@ const Lawyers = [
   },
 
   {
-    id: "",
+    id: "3",
     name: "Albert Rühling",
     specialty: ["Immigration law"],
     language: [
@@ -51,7 +51,7 @@ const Lawyers = [
   },
 
   {
-    id: "",
+    id: "4",
     name: "Ardehali Law Office",
     specialty: ["Immigration law"],
     language: ["English, Persian/Farsi"],
@@ -66,7 +66,7 @@ const Lawyers = [
   },
 
   {
-    id: "",
+    id: "5",
     name: "Ingo Ziesemer",
     specialty: ["Immigration law"],
     language: ["English"],
@@ -80,7 +80,7 @@ const Lawyers = [
   },
 
   {
-    id: "",
+    id: "6",
     name: "Jan-Olaf Moyzes",
     specialty: ["Immigration law"],
     language: ["English"],
@@ -93,7 +93,7 @@ const Lawyers = [
   },
 
   {
-    id: "",
+    id: "7",
     name: "Rechtsanwaltskanzlei Iyare A. Imasi",
     specialty: ["Immigration law"],
     language: ["English"],
@@ -110,7 +110,7 @@ const Lawyers = [
   },
 
   {
-    id: "",
+    id: "8",
     name: "Rechtsanwaltskanzlei Iyare A. Imasi",
     specialty: ["Immigration law"],
     language: ["English"],
@@ -127,7 +127,7 @@ const Lawyers = [
   },
 
   {
-    id: "",
+    id: "9",
     name: "Philipp Kutschke",
     specialty: ["Immigration law"],
     language: ["Vietnamese", "English"],
@@ -144,7 +144,7 @@ const Lawyers = [
   },
 
   {
-    id: "",
+    id: "10",
     name: "Korte Rechtsanwälte",
     specialty: ["Family law"],
     language: ["English"],
