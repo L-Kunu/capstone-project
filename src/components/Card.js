@@ -11,7 +11,7 @@ function Card({ lawyer }) {
     <CardWrapper specialty={lawyer.specialty}>
       <h2>{lawyer.name}</h2>
 
-      <CardList>
+      <CardList data-testid='CardList'>
         {lawyer.specialty.map((speciality, index) => (
           <ListElement key={index}>{speciality}</ListElement>
         ))}
