@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import i18next from "./i18n";
+import i18next from "../i18next";
 
 export default function Languages(lang) {
   const { t, i18n } = useTranslation();
@@ -37,5 +37,15 @@ const LanguageContainer = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
+  gap: 10px;
+
+  button {
+    border: none;
+    border-radius: 8px;
+    color: #093764;
+    padding: 8px 20px;
+    background-color: #cfe8ef;
+    font-size: 1.3rem;
+  }
 `;

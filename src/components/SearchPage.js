@@ -56,14 +56,13 @@ const ContainerWrapper = styled.div`
 `;
 
 const Form = styled.form`
-background-color: #A7BBC7;
+background-color: #cfe8ef;
 border-radius: 14px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 16px;
-  //opacity: 0.8;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  //box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   input {
     flex: 1 1;
     border: 1px solid grey;

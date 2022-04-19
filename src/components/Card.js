@@ -39,15 +39,14 @@ function Card({ lawyer }) {
 export default Card;
 
 const CardWrapper = styled.section`
-  background-color: #219ebc;
-  color: #1d1045;
+  background-color: #38b3cb;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 10px;
   padding: 20px;
-  border-radius: 15px;
-  border-left: 14px solid #ccd;
+  border-radius: 8px;
   opacity: 1;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.2s;
