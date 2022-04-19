@@ -4,6 +4,7 @@ import styled from "styled-components";
 import SearchPage from "./components/SearchPage.js";
 import { useState } from "react";
 import useLocalStorage from "./Hooks/UseLocalStorage.js";
+import Languages from "./components/Languages.js";
 
 function App(index) {
   const [lawyerList, setLawyerList] = useLocalStorage("LawyerList", []);
@@ -29,6 +30,7 @@ function App(index) {
     <>
       <AppWrapper>
         <Tittle>Capstone Project</Tittle>
+        <Languages />
         <SearchPage onSubmit={handleFilter} />
         <CardGrid>
           {filteredLawyers.map((lawyerElement) => {
