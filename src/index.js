@@ -1,4 +1,5 @@
-import React, { Suspense } from "react";
+import React, { Component, Suspense } from "react";
+
 import ReactDOM from "react-dom";
 import GlobalStyles from "./GlobalStyles";
 import App from "./App";

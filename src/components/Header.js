@@ -17,16 +17,14 @@ const HeaderContainer = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  margin-bottom: 50px;
 `;
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
 `;
 
 const Tittle = styled.h1`
-  color: #093764;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  margin-top: -25px;
+  margin-top: 5px;
   padding: 20px;
   text-align: left;
   width: 100vw;

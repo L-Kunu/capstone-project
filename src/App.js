@@ -51,6 +51,7 @@ const AppWrapper = styled.main`
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  overflow-x: scroll;
 `;
 
 const CardGrid = styled.div`

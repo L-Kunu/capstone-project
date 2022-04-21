@@ -1,8 +1,27 @@
 {
-  "Intro": {
-    "Greeting": "Welcome to Law-finity"
-  },
-  "Action": {
-    "1": "Please choose a language, otherwise click the Next buton to continue"
+  "Greeting": "Welcome to Law-finity",
+
+  "Action": "Please choose a language, otherwise click the Next button to continue",
+
+  "search-page": {
+    "name": {
+      "label": "Your name",
+      "placeholder": "Enter your name here"
+    },
+
+    "city": {
+      "label": "Your city",
+      "placeholder": "Enter the name of your city here"
+    },
+
+    "specialty": {
+      "legend": "Choose the kind of lawyer you are looking for",
+      "options": {
+        "immigration": "Immigration",
+        "family": "Family"
+      }
+    },
+
+    "submit": "Search"
   }
 }

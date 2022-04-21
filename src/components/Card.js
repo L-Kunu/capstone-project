@@ -46,7 +46,7 @@ const CardWrapper = styled.section`
   align-items: stretch;
   gap: 10px;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 8 px;
   opacity: 1;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.2s;
