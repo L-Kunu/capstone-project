@@ -46,6 +46,7 @@ const LanguageContainer = styled.div`
 
 const Greeting = styled.h1`
   color: #093764;
+  text-align: center;
 `;
 
 const CallToAction = styled.h2`

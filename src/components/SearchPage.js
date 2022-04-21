@@ -35,7 +35,7 @@ export default function SearchPage({ onSubmit }) {
           id='city-input'
           placeholder={t("search-page.city.placeholder")}
         />
-        <fieldset>
+        <Fieldset>
           <legend>{t("search-page.specialty.legend")}</legend>
 
           <div>
@@ -50,7 +50,8 @@ export default function SearchPage({ onSubmit }) {
               {t("search-page.specialty.options.family")}
             </label>
           </div>
-        </fieldset>
+        </Fieldset>
+
         <Button buttonType='search' style={{ backgroundColor: "lightblue" }}>
           {t("search-page.submit")}
         </Button>
@@ -86,7 +87,9 @@ color: #38b3c8;
     ::placeholder {
       color: #c8cbca;
     }
+    
+`;
 
-    
-    
+const Fieldset = styled.fieldset`
+  border: none;
 `;
