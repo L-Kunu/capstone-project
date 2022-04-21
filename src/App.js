@@ -5,6 +5,7 @@ import SearchPage from "./components/SearchPage.js";
 import { useState } from "react";
 import useLocalStorage from "./Hooks/UseLocalStorage.js";
 import Languages from "./components/Languages.js";
+import Header from "./components/Header.js";
 
 function App(index) {
   const [lawyerList, setLawyerList] = useLocalStorage("LawyerList", []);
@@ -29,7 +30,7 @@ function App(index) {
   return (
     <>
       <AppWrapper>
-        <Tittle>Capstone Project</Tittle>
+        <Header />
         <Languages />
         <SearchPage onSubmit={handleFilter} />
         <CardGrid>
@@ -50,21 +51,11 @@ const AppWrapper = styled.main`
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  overflow-x: scroll;
 `;
 
 const CardGrid = styled.div`
   display: grid;
   gap: 30px;
   padding: 20px;
-`;
-
-const Tittle = styled.h1`
-background-color: #023047;
-box-shadow: 0 4px 8px 0 rgb(39, 50, 47, 0.25);
-border. none;
-color: #ccd;
-margin-top: -15px;
-padding: 20px 10px;
-text-align: center;
-width: 100vw;
 `;

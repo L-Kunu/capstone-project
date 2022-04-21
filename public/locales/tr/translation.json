@@ -1,8 +1,5 @@
 {
-  "Intro": {
-    "Greeting": "WHoşgeldiniz Law-finity"
-  },
-  "Action": {
-    "1": "Lütfen bir dil seçin veya devam etmek için sonraki düğmeyi tıklayın"
-  }
+  "Greeting": "WHoşgeldiniz Law-finity",
+
+  "Action": "Lütfen bir dil seçin veya devam etmek için sonraki düğmeyi tıklayın"
 }

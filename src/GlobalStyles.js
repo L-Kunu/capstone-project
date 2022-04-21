@@ -7,13 +7,13 @@ export default createGlobalStyle`
 }
  
 body {
-    font-family: sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
-    background-color: #feeafe;
+    background-color: white;
+    
 }
 
 input, label, button, textarea, {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 `;

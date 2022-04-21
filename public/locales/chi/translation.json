@@ -1,8 +1,5 @@
 {
-  "Intro": {
-    "Greeting": "歡迎來到 Law-finity"
-  },
-  "Action": {
-    "1": "請選擇一種語言，否則單擊下一步按鈕繼續"
-  }
+  "Greeting": "歡迎來到 Law-finity",
+
+  "Action": "請選擇一種語言，否則單擊下一步按鈕繼續"
 }

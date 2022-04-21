@@ -1,8 +1,5 @@
 {
-  "Intro": {
-    "Greeting": "Bienvenido a Law-finity"
-  },
-  "Action": {
-    "1": "Elija un idioma; de lo contrario, haga clic en el siguiente botón para continuar"
-  }
+  "Greeting": "Bienvenido a Law-finity",
+
+  "Action": "Elija un idioma; de lo contrario, haga clic en el siguiente botón para continuar"
 }
