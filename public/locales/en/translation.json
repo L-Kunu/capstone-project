@@ -1,0 +1,8 @@
+{
+  "Intro": {
+    "Greeting": "Welcome to Law-finity"
+  },
+  "Action": {
+    "1": "Please choose a language, otherwise click the Next buton to continue"
+  }
+}
