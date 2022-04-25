@@ -12,7 +12,7 @@ export default function ContactCard({ lawyer }) {
         {" " + lawyer.language}
       </ListElement>
       <ListElement>
-        <Props>Addresse:</Props>
+        <Props>Address:</Props>
         {" " + lawyer.contact.address}
       </ListElement>
       <ListElement>
@@ -32,14 +32,14 @@ export default function ContactCard({ lawyer }) {
 }
 
 const Container = styled.div`
-  dispaly: grid;
-  grid-template-colomns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 `;
 
 const ListElement = styled.li`
   padding: 5px 14px;
   list-style: none;
-  font-soze: 1rem;
+  font-size: 1rem;
 `;
 
 const Props = styled.span`

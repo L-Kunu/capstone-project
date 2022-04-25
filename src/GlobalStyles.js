@@ -13,7 +13,9 @@ body {
     
 }
 
-input, label, button, textarea, {
-    font-size: 1.2rem;
+
+input, label, button, textarea, *{
+
+   
 }
 `;
