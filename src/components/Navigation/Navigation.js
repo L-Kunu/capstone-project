@@ -17,11 +17,6 @@ export default function Navigation() {
 				<span>Search page</span>
 				<FaSearchLocation size={34} />
 			</NavLinkStyled>
-
-			<NavLinkStyled to='/mapPage'>
-				<span>Map page</span>
-				<RiMapPin2Fill size={34} />
-			</NavLinkStyled>
 		</Navbar>
 	);
 }

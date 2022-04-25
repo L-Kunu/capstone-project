@@ -9,7 +9,6 @@ import { Routes, Route, Navlink } from 'react-router-dom';
 import Header from './components/Header.js';
 import { useTranslation } from 'react-i18next';
 import Navigation from './components/Navigation/Navigation.js';
-import Map from './components/Map/Map';
 
 function App(index) {
 	const [lawyerList, setLawyerList] = useLocalStorage('LawyerList', []);
@@ -43,12 +42,16 @@ function App(index) {
 						onSubmit={handleFilter}
 					/>
 
-					<Route path='/Map' element={<Map address={address} />} />
-					<CardGrid>
-						{filteredLawyers.map((lawyerElement) => {
-							return <Card key={lawyerElement.id} lawyer={lawyerElement} />;
-						})}
-					</CardGrid>
+					<Route
+						path='/Card'
+						element={
+							<CardGrid>
+								{filteredLawyers.map((lawyerElement) => {
+									return <Card key={lawyerElement.id} lawyer={lawyerElement} />;
+								})}
+							</CardGrid>
+						}
+					/>
 				</Routes>
 				<Footer>
 					<Navigation />
