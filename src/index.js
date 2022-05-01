@@ -1,18 +1,22 @@
-import React, { Component, Suspense } from "react";
+import React, { Component, Suspense } from 'react';
 
-import ReactDOM from "react-dom";
-import GlobalStyles from "./GlobalStyles";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import "./i18next";
+import ReactDOM from 'react-dom';
+import GlobalStyles from './GlobalStyles';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import './i18next';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <GlobalStyles />
-    <Suspense fallback={<div>Loading~~~~</div>}>
-      <App />
-    </Suspense>
-  </React.StrictMode>,
-  document.getElementById("root")
+	<React.StrictMode>
+		<Router>
+			<GlobalStyles />
+			<Suspense fallback={<div>Loading~~~~</div>}>
+				<App />
+			</Suspense>
+		</Router>
+	</React.StrictMode>,
+	document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import { getByAltText } from '@testing-library/react';
 const languages = {
-	//ar: "Arabic",
+	ar: 'عربى',
 	//chi: "Chinese",
 	en: 'English',
-	de: 'German',
-	//fr: "French",
-	fa: 'Persian',
+	de: 'Deutsch',
+	fr: 'Français',
+	//fa: 'Persian',
 	//es: "Spanish",
 	// tr: "Turkish",
 };
@@ -24,7 +24,11 @@ export default function Languages(lng) {
 			{Object.entries(languages).map(([code, name]) => {
 				return (
 					<>
-						<button onClick={() => i18n.changeLanguage(code)}>{name}</button>
+						<StyledLink>
+							<Link to='/' onClick={() => i18n.changeLanguage(code)}>
+								{name}
+							</Link>
+						</StyledLink>
 					</>
 				);
 			})}
@@ -37,15 +41,7 @@ const LanguageContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	gap: 10px;
-
-	button {
-		border: none;
-		border-radius: 8px;
-		color: #093764;
-		padding: 8px 20px;
-		background-color: #cfe8ef;
-		font-size: 1.3rem;
-	}
+	margin-bottom: 64px;
 `;
 
 const Greeting = styled.h1`
@@ -56,8 +52,18 @@ const Greeting = styled.h1`
 const CallToAction = styled.h2`
 	border: 1px solid #38b4cd;
 	border-radius: 12px;
+	font-size: 1.2rem;
 	color: #415a77;
 	padding: 20px;
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 	text-align: center;
+`;
+
+const StyledLink = styled.li`
+	text-decoration: none;
+	list-style: none;
+	> * {
+		text-decoration: none;
+		color: #093764;
+	}
 `;

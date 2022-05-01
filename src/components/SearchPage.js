@@ -2,8 +2,10 @@ import React from 'react';
 import Button from './Button';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import Card from './Card';
 
-export default function SearchPage({ onSubmit }) {
+export default function SearchPage({ onSubmit, filteredLawyers }) {
 	const { t } = useTranslation();
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -54,10 +56,17 @@ export default function SearchPage({ onSubmit }) {
 						</label>
 					</div>
 				</Fieldset>
+
 				<Button buttonType='search' style={{ backgroundColor: 'lightblue' }}>
 					{t('search-page.submit')}
 				</Button>
 			</Form>
+
+			<CardGrid>
+				{filteredLawyers.map((lawyerElement) => {
+					return <Card key={lawyerElement.id} lawyer={lawyerElement} />;
+				})}
+			</CardGrid>
 		</ContainerWrapper>
 	);
 }
@@ -66,6 +75,7 @@ const ContainerWrapper = styled.div`
 	margin-top: -1px;
 	display: block;
 	padding: 20px;
+	margin: 10px;
 `;
 
 const Form = styled.form`
@@ -77,6 +87,7 @@ const Form = styled.form`
 	justify-content: center;
 	padding: 16px;
 	font-size: 1.5rem;
+	margin-bottom: 4rem;
 
 	//box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 
@@ -96,4 +107,23 @@ const Form = styled.form`
 
 const Fieldset = styled.fieldset`
 	border: none;
+`;
+
+/*const StyledLink = styled.li`
+	text-decoration: none;
+	list-style: none;
+	text-align: center;
+	margin-bottom: 1rem;
+	> * {
+		text-decoration: none;
+		border-radius: 999px;
+		color: black;
+		padding: 10px;
+		background-color: lightblue;
+	}
+`;*/
+
+const CardGrid = styled.div`
+	display: grid;
+	gap: 30px;
 `;

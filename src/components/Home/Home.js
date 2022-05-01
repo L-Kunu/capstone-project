@@ -1,13 +1,12 @@
 import React from 'react';
 import Languages from '../Languages/Languages';
-import { NavLink, Route } from 'react-router-dom';
+import { Router as Route, Routes, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function Home() {
 	return (
 		<>
 			<Languages />
-			<StyledNavLink>Next</StyledNavLink>
 		</>
 	);
 }

@@ -40,6 +40,7 @@ export default Card;
 
 const CardWrapper = styled.section`
 	background-color: #38b3cb;
+	width: 300px;
 	color: #fff;
 	display: flex;
 	flex-direction: column;

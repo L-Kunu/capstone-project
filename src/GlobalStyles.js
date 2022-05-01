@@ -11,5 +11,6 @@ body {
     font-size: 1.5rem;
     line-height: 1.5;
     background-color: white;
+   
 }
 `;
