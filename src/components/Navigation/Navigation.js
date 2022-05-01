@@ -4,18 +4,28 @@ import styled from 'styled-components';
 import { AiFillHome } from 'react-icons/ai';
 import { FaSearchLocation } from 'react-icons/fa';
 import { RiMapPin2Fill } from 'react-icons/ri';
+import { BsInfoSquareFill } from 'react-icons/bs';
 
 export default function Navigation() {
 	return (
 		<Navbar>
 			<NavLinkStyled to='/'>
-				<span>Home</span>
+				<span></span>
 				<AiFillHome size={34} />
 			</NavLinkStyled>
 
 			<NavLinkStyled to='/SearchPage'>
-				<span>Search page</span>
+				<span></span>
 				<FaSearchLocation size={34} />
+			</NavLinkStyled>
+
+			{/*<NavLinkStyled to='./Card'>
+				<span></span>
+				<FaSearchLocation size={34} />
+	</NavLinkStyled>*/}
+			<NavLinkStyled to='/About'>
+				<span></span>
+				<BsInfoSquareFill size={34} />
 			</NavLinkStyled>
 		</Navbar>
 	);
@@ -25,15 +35,16 @@ const Navbar = styled.nav`
 	display: flex;
 	align-items: center;
 	height: 8vh;
+	margin-top: 20px;
 `;
 
 const NavLinkStyled = styled(NavLink)`
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	width: 100%;
 	color: #093764;
 
 	&.active {
-		color: #38b4cd;
+		color: #9ceaef;
 	}
 `;

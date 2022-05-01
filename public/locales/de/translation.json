@@ -1,27 +1,27 @@
 {
-  "Greeting": "Willkommen zu Law-finity",
+	"Greeting": "Willkommen zu Law-finity",
 
-  "Action": "Bitte wählen Sie eine Sprache, sonst klicken Sie den Weiter Knopf um fortzufahren ",
+	"Action": "Bitte wählen Sie eine Sprache um fortzufahren ",
 
-  "search-page": {
-    "name": {
-      "label": "Ihr Name",
-      "placeholder": "Schreiben Sie Ihren Namen hier"
-    },
+	"search-page": {
+		"name": {
+			"label": "Ihr Name",
+			"placeholder": "Schreiben Sie Ihren Namen hier"
+		},
 
-    "city": {
-      "label": "Ihre Stadt",
-      "placeholder": "Schreiben Sie Ihre Stadt hier"
-    },
+		"city": {
+			"label": "Ihre Stadt",
+			"placeholder": "Schreiben Sie Ihre Stadt hier"
+		},
 
-    "specialty": {
-      "legend": "Choose the kind of lawyer you are looking for",
-      "options": {
-        "immigration": "Immigration",
-        "family": "Familie"
-      }
-    },
+		"specialty": {
+			"legend": "Wählen Sie die Art des Anwalts, den Sie suchen",
+			"options": {
+				"immigration": "Immigration",
+				"family": "Familie"
+			}
+		},
 
-    "submit": "Suchen"
-  }
+		"submit": "Suchen"
+	}
 }
